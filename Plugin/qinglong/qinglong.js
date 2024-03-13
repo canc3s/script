@@ -134,3 +134,8 @@ updateCkEnv({
     name: "ddgyck",
     value: ddgyck,
 });
+let GD_Val = $persistentStore.read("GD_Val");
+updateCkEnv({
+    name: "GD_Val",
+    value: GD_Val,
+});

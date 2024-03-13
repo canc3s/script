@@ -21,11 +21,11 @@ http-request ^https?:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/text script
 # 滴滴果园获取token
 http-request ^https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/watering script-path = https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/xiaojukeji.js, tag = 滴滴果园获取token
 
-# 首页歌单会员歌曲
-http-request ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(homepage\/|v6\/)?playlist\/ script-path = https://gitlab.com/isous/loonresource/-/raw/main/Script/NeteaseCloudMusic/NeteaseCloudMusic_shared_membership.js, tag = 首页歌单会员歌曲
+# 高德打车获取sessionid
+http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path = https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/ampDache.js, requires-body = true, tag = 高德打车获取sessionid
 
 # 青龙环境变量同步
 cron "0 6 * * *" script-path= https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/qinglong.js, tag = 青龙环境变量同步, timeout = 60
 
 [Mitm]
-hostname = epassport.diditaxi.com.cn, nt2.ele.me, api.pinduoduo.com, game.xiaojukeji.com
+hostname = epassport.diditaxi.com.cn, nt2.ele.me, api.pinduoduo.com, game.xiaojukeji.com, dache.amap.com, m5-zb.amap.com, m5.amap.com

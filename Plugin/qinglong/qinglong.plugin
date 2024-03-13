@@ -1,0 +1,30 @@
+#!name = 青龙环境变量同步
+#!desc = 请严格填写数据，使用时需启用此插件，点击下方链接查看使用说明。
+#!openUrl = https://github.com/canc3s/script/tree/loon/Plugin/qinglong
+#!author = canc3s
+#!date = 2024-03-13 15:55:41
+#!input = QL_URL
+#!input = CLIENT_ID
+#!input = CLIENT_SECRET
+
+[Script]
+# 滴滴领券获取ticket
+http-response ^https?:\/\/epassport\.diditaxi\.com\.cn\/passport\/login\/v5\/signInByOpenid script-path = https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/diditaxi.js, requires-body = true, tag = 滴滴领券获取ticket
+
+# 饿了么获取token
+http-request ^https?:\/\/nt2\.ele\.me\/c\/b script-path = https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/ele.js, tag = 饿了么获取token
+
+# 多多果园获取Accesstoken
+http-request ^https?:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/text script-path = https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/pinduoduo.js, tag = 多多果园获取Accesstoken
+
+# 滴滴果园获取token
+http-request ^https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/watering script-path = https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/xiaojukeji.js, tag = 滴滴果园获取token
+
+# 首页歌单会员歌曲
+http-request ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(homepage\/|v6\/)?playlist\/ script-path = https://gitlab.com/isous/loonresource/-/raw/main/Script/NeteaseCloudMusic/NeteaseCloudMusic_shared_membership.js, tag = 首页歌单会员歌曲
+
+# 青龙环境变量同步
+cron "0 6 * * *" script-path= https://raw.githubusercontent.com/canc3s/script/loon/Plugin/qinglong/qinglong.js, tag = 青龙环境变量同步, timeout = 60
+
+[Mitm]
+hostname = epassport.diditaxi.com.cn, nt2.ele.me, api.pinduoduo.com, game.xiaojukeji.com

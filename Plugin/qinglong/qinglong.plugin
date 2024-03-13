@@ -2,6 +2,7 @@
 #!desc = 请严格填写数据，使用时需启用此插件，点击下方链接查看使用说明。
 #!openUrl = https://github.com/canc3s/script/tree/loon/Plugin/qinglong
 #!author = canc3s
+#!icon = https://user-images.githubusercontent.com/22700758/191449379-f9f56204-0e31-4a16-be5a-331f52696a73.png
 #!date = 2024-03-13 15:55:41
 #!input = QL_URL
 #!input = CLIENT_ID

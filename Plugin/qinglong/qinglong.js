@@ -90,7 +90,7 @@ function updateCkEnv(ck = {}) {
         Authorization: 'Bearer ' + token,
         'Content-Type': 'application/json;charset=UTF-8',
       };
-      const updateData = [{ id: env.id, value: ck.value, name: ck.name }];
+      const updateData = { id: env.id, value: ck.value, name: ck.name };
       $httpClient.put({
         url: `${QL_URL}/open/envs?t=${+new Date()}`,
         headers: headers,

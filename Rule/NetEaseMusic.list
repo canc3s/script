@@ -1,0 +1,33 @@
+# NAME: NetEaseMusic
+# AUTHOR: cances
+# REPO: https://github.com/canc3s/script
+# 配合 https://github.com/UnblockNeteaseMusic/server
+# 解锁网易云音乐客户端变灰歌曲
+
+DOMAIN,music.163.com
+DOMAIN,apm.music.163.com
+DOMAIN,apm3.music.163.com
+DOMAIN,interface.music.163.com
+DOMAIN,interface3.music.163.com
+DOMAIN,interface.music.163.com.163jiasu.com
+DOMAIN,interface3.music.163.com.163jiasu.com
+IP-CIDR,59.111.160.195/32,no-resolve
+IP-CIDR,59.111.160.197/32,no-resolve
+IP-CIDR,115.238.119.67/32,no-resolve
+IP-CIDR,115.238.119.68/32,no-resolve
+IP-CIDR,115.238.119.69/32,no-resolve
+IP-CIDR,117.161.183.90/32,no-resolve
+IP-CIDR,117.161.183.94/32,no-resolve
+IP-CIDR,124.239.251.60/32,no-resolve
+IP-CIDR,183.136.182.18/32,no-resolve
+IP-CIDR,183.136.182.19/32,no-resolve
+IP-CIDR,183.136.182.20/32,no-resolve
+IP-CIDR6,240e:f7:4019:12::1/128
+IP-CIDR6,240e:f7:4019:12::2/128
+IP-CIDR6,240e:f7:4019:12::3/128
+IP-CIDR6,240e:f7:4019:65::3/128
+IP-CIDR6,240e:f7:4019:65::4/128
+IP-CIDR6,240e:f7:4019:65::5/128
+IP-CIDR6,2409:8c10:c00:4f4::1:e0/128
+IP-CIDR6,2409:8c10:c00:4f4::1:e4/128
+IP-CIDR6,240e:b1:9801:40e:800::49/128

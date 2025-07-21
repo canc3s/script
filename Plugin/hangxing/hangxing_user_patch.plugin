@@ -4,5 +4,8 @@
 #!homepage=https://api.flight.hangxing123.top
 
 [Script]
-http-request ^https:\/\/api\.flight\.hangxing123\.top\/dronev2\/user\/infov2$ script-path=https://raw.githubusercontent.com/canc3s/script/loon/Plugin/hangxing/hangxing_user_patch.js tag=Hangxing Remove Encrypt Header
-http-response ^https:\/\/api\.flight\.hangxing123\.top\/dronev2\/user\/infov2$ script-path=https://raw.githubusercontent.com/canc3s/script/loon/Plugin/hangxing/hangxing_user_patch.js requires-body=true tag=Hangxing Modify Member Info
+http-request ^https:\/\/api\.flight\.hangxing123\.top\/dronev2\/user\/infov2$ script-path=https://raw.githubusercontent.com/canc3s/script/loon/Plugin/hangxing/hangxing_user_patch.js, tag=Hangxing Remove Encrypt Header
+http-response ^https:\/\/api\.flight\.hangxing123\.top\/dronev2\/user\/infov2$ script-path=https://raw.githubusercontent.com/canc3s/script/loon/Plugin/hangxing/hangxing_user_patch.js, requires-body=true, tag=Hangxing Modify Member Info
+
+[Mitm]
+hostname = api.flight.hangxing123.top

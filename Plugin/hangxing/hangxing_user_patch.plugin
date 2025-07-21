@@ -1,0 +1,8 @@
+#!name=航行用户信息补丁
+#!desc=去除 Encrypt 请求头
+#!author=canc3s
+#!homepage=https://api.flight.hangxing123.top
+
+[Script]
+http-request ^https:\/\/api\.flight\.hangxing123\.top\/dronev2\/user\/infov2$ script-path=https://your-domain.com/hangxing_user_patch.js tag=Hangxing Remove Encrypt Header
+http-response ^https:\/\/api\.flight\.hangxing123\.top\/dronev2\/user\/infov2$ script-path=https://your-domain.com/hangxing_user_patch.js requires-body=true tag=Hangxing Modify Member Info
